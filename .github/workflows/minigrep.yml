@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Build
         working-directory: src/minigrep
-        run: cargo build --verbose
+        run: cargo build --verbose --color always
       - name: Run tests
         working-directory: src/minigrep
-        run: cargo test --verbose
+        run: cargo test --verbose --color always
