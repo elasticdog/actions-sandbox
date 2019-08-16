@@ -9,8 +9,8 @@ jobs:
 
     steps:
     - name: Hello world
-      run: echo Hello world ${FIRST_NAME} ${MIDDLE_NAME} ${LAST_NAME}!
-    env:
-      first_name: Mona
-      middle_name: The
-      last_name: Octocat
+      run: echo Hello world ${INPUT_FIRST_NAME} ${INPUT_MIDDLE_NAME} ${INPUT_LAST_NAME}!
+      with:
+        first_name: Mona
+        middle_name: The
+        last_name: Octocat
