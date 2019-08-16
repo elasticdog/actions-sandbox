@@ -1,7 +1,7 @@
 ---
 name: Hardware Info
 
-on: [push]
+on: [pull_request]
 
 jobs:
   screenfetch:
