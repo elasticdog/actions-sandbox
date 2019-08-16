@@ -13,4 +13,4 @@ jobs:
       env:
         FIRST_NAME: Mona
         MIDDLE_NAME: The
-        last_name: Octocat
+        LAST_NAME: Octocat
