@@ -1,0 +1,14 @@
+name: Hardware Info
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Who am I?
+      run: whoami
+    - name: What can I do?
+      run: sudo -l
