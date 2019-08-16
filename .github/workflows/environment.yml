@@ -38,7 +38,7 @@ jobs:
       - name: Where am I?
         run: |-
           pwd
-          ls -l
+          tree -L 4 --dirsfirst -C "$HOME"
 
   hardware-info:
     runs-on: ubuntu-latest
