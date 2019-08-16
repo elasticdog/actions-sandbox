@@ -14,10 +14,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    working-directory: src/minigrep
     steps:
       - uses: actions/checkout@v1
       - name: Build
+        working-directory: src/minigrep
         run: cargo build --verbose
       - name: Run tests
+        working-directory: src/minigrep
         run: cargo test --verbose
