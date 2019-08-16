@@ -4,6 +4,12 @@ name: Hardware Info
 on: [pull_request]
 
 jobs:
+  neofetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install neofetch
+        run: sudo apt-get -y install neofetch
+      - run: neofetch
   screenfetch:
     runs-on: ubuntu-latest
     steps:
