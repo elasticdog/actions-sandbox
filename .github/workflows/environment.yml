@@ -35,6 +35,8 @@ jobs:
   filesystem:
     runs-on: ubuntu-latest
     steps:
+      - name: Install tree
+        run: sudo apt-get -y install tree
       - name: Where am I?
         run: |-
           pwd
