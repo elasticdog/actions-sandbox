@@ -7,7 +7,6 @@ jobs:
   screenfetch:
     runs-on: ubuntu-latest
     steps:
-      - name: install
+      - name: Install screenfetch
         run: sudo apt-get -y install screenfetch
-      - name: display
-        run: screenfetch
+      - run: screenfetch
