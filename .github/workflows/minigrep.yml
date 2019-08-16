@@ -1,0 +1,23 @@
+---
+name: minigrep
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - src/minigrep/*
+  pull_request:
+    paths:
+      - src/minigrep/*
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    working-directory: src/minigrep
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build
+        run: cargo build --verbose
+      - name: Run tests
+        run: cargo test --verbose
