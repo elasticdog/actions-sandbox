@@ -1,0 +1,19 @@
+---
+name: Mark stale issues and pull requests
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-issue-message: >-
+            This issue is considered stale because it has been open for 1 day with no activity.
+            Remove the stale label or leave a comment, or this issue will be closed in 2 days.
+          days-before-stale: 1
+          days-before-close: 2
