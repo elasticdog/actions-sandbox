@@ -2,9 +2,10 @@
 
 ## Notes
 
-- Even though the `$GITHUB_TOKEN` secret changes for each run, it looks like
-  they don't expire...at least not right away. 10 minutes after a run, I was
-  able to use a token to post a status on the [initial commit][].
+- Even though the `$GITHUB_TOKEN` secret changes for each run, they appear to be
+  using regular GitHub Application credentials tied to @github-actions and they
+  don't expire until an hour after creation. I was able to use a token to post a
+  status on the [initial commit][]. Just something to keep in mind.
 
 [initial commit]:
   https://github.com/elasticdog/actions-sandbox/commit/057541729acfb981b38a2034edf8ecea0b0ef7ea
