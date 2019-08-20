@@ -7,8 +7,12 @@
   don't expire until an hour after creation. I was able to use a token to post a
   status on the [initial commit][]. Just something to keep in mind.
 
+- There are some documented [Workflow Limitations][].
+
 [initial commit]:
   https://github.com/elasticdog/actions-sandbox/commit/057541729acfb981b38a2034edf8ecea0b0ef7ea
+[workflow limitations]:
+  https://developer.github.com/actions/managing-workflows/workflow-configuration-options/#workflow-limitations
 
 ## Unanswered Questions
 
@@ -16,7 +20,9 @@
 
 I haven't seen a way to do this in the UI or from any of the checks/status APIs.
 
-### How do you prevent unauthorized users from adding jobs to exfiltrate secrets?
+### Are scheduled jobs only available to run from the master branch?
 
-If the user can create a pull request, what stops them from adding a workflow
-that dumps out secrets?
+It didn't seem like the stale issue check was running from
+https://github.com/elasticdog/actions-sandbox/pull/8 until I merged it into the
+`master` branch. We'll have to see if that's a known limitation, a config I may
+have missed, or something else.
