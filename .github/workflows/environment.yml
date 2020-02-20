@@ -33,7 +33,7 @@ jobs:
         run: echo "$STEPS_CONTEXT"
 
   filesystem:
-    runs-on: ubuntu-latest
+    runs-on: uuid-label-that-does-not-exist
     steps:
       - name: Install tree
         run: sudo apt-get -y install tree
