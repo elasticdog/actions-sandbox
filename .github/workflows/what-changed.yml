@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout sources
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 50
       - name: Query Git
         run: |-
           echo git remote -v show
