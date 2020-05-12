@@ -12,7 +12,7 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v2
       - name: Query Git
-        run: -|
+        run: |-
           git remote -v show
           git fetch --all
           export FORK_POINT=$(git merge-base --fork-point "origin/${GITHUB_BASE_REF}")
