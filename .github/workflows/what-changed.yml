@@ -1,0 +1,18 @@
+---
+name: What Changed
+
+on:
+  pull_request:
+
+jobs:
+  files:
+    name: Files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v2
+      - name: Query Git
+        run: |-
+          git remote -v show
+          FORK_POINT=$(git merge-base --fork-point "origin/${GITHUB_BASE_REF}")
+          git diff-tree --no-commit-id --name-only -r --diff-filter=d "${FORK_POINT}.."
