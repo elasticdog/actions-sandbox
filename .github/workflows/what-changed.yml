@@ -12,7 +12,9 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v2
       - name: Query Git
-        run: |-
+        run: -|
           git remote -v show
-          FORK_POINT=$(git merge-base --fork-point "origin/${GITHUB_BASE_REF}")
+          git fetch --all
+          export FORK_POINT=$(git merge-base --fork-point "origin/${GITHUB_BASE_REF}")
+          printf 'FORK_POINT: %s\n' "$FORK_POINT"
           git diff-tree --no-commit-id --name-only -r --diff-filter=d "${FORK_POINT}.."
