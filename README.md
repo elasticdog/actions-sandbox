@@ -22,3 +22,5 @@
 ### Can you delete the build logs for an individual run?
 
 I haven't seen a way to do this in the UI or from any of the checks/status APIs.
+
+Changing
